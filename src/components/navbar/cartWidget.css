@@ -1,6 +1,11 @@
 .cart{
+    width: 25%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    gap: 15px;
+    gap: 2px;
 }   
+
+.cart img{
+    margin-bottom: 5px;
+}

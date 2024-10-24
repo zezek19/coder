@@ -1,0 +1,90 @@
+.itemDetail{
+    margin: 50px 55px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20%;
+}
+
+.itemSpecs{
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 70px 150px 200px 50px ;
+    font-family: "Pathway Gothic One", sans-serif;
+}
+
+.nameDetail{
+    font-size: 50px;
+}
+
+.descriptionDetail{
+    font-size: 20px;
+}
+
+.priceDetail{
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+
+
+/* BOTONES PARA AUMENTAR EL CONTADOR Y BOTON PARA AGREGAR AL CARRITO */
+
+
+.cartContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: skewX(-20deg);
+}
+
+
+.buttonContainer{
+    width: 250px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.buttonContainer button{
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: inherit;
+    width: 50px;
+    height: 50px;
+}
+
+
+.buttonContainer button:hover{
+    cursor: pointer;
+}
+
+
+.addCartContainer{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 250px;
+    font-size: 20px;
+    border: 1px solid black;
+}
+
+.addCartContainer button{
+    font-size: 28px;
+    font-family: "Pathway Gothic One", sans-serif;
+    background: none;
+    border: none;
+}
+
+
+.addCartContainer:hover{
+    background-color: black;
+}
+
+.addCartContainer:hover button{
+    color: white;
+}
+
