@@ -1,20 +1,37 @@
 import ItemCount from "./itemCount.jsx";
+import { useContext, useState } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ product }) => {
-    return (
-        <div className='itemDetail'>
-            <img src={product.image} alt="" />
-            <div className='itemSpecs'>
-                <h2 className="nameDetail">{product.name}</h2>
-                <p className="descriptionDetail">{product.description}</p>
-                <p className="priceDetail">${product.price}</p>
-                <div>
-                <ItemCount stock = {product.stock}></ItemCount>
-                </div>
-            </div>
+  const [showItemCount, setShowItemCount] = useState(true);
+  const { addProductInCart } = useContext(CartContext);
 
-        </div>
-    )
-}
+  const addProduct = (count) => {
+    const productCart = { ...product, quantity: count };
 
-export default ItemDetail
+    addProductInCart(productCart);
+    setShowItemCount(false);
+  };
+
+  return (
+    <div className="item-detail">
+      <img className="imageProduct" src={product.image} alt="" />
+      <div className="item-detail-container">
+        <h2 className="title-detail">{product.name}</h2>
+        <p className="text-detail">{product.description}</p>
+        <p className="price-detail">${product.price}</p>
+        <p className="text-detail">Precio: ${product.price}</p>
+        {showItemCount === true ? (
+          <ItemCount stock={product.stock} addProduct={addProduct} />
+        ) : (
+          <Link to="/cart" className="button-end-buy">
+            Finalizar compra
+          </Link>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default ItemDetail;

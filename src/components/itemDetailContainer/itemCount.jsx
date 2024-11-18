@@ -1,32 +1,32 @@
-import { useState } from "react";
+import { useState } from "react"
 
-const ItemCount = ({ stock }) => {
-  const [contador, setContador] = useState(1);
+const ItemCount = ({ stock, addProduct }) => {
+  const [count, setCount] = useState(1)
 
-  const restasContador = () => {
-    if (contador > 1) {
-      setContador(contador - 1);
+  const handleClickDecrement = () => {
+    if (count > 1) {    
+      setCount(count - 1)
     }
-  };
+  }
 
-  const aumentarContador = () => {
-    if (contador < stock) {
-      setContador(contador + 1);
+  const handleClickIncrement = () => {
+    if (count < stock) {
+      setCount(count + 1)
     }
-  };
+  }
 
   return (
-    <div className="cartContainer">
-      <div className="buttonContainer">
-        <button onClick={restasContador}>-</button>
-        <h2>{contador}</h2>
-        <button onClick={aumentarContador}>+</button>
+    <div className="item-count">
+      <div className="controls-count">
+        <button onClick={handleClickDecrement} >-</button>
+        <p>{count}</p>
+        <button onClick={handleClickIncrement} >+</button>
       </div>
-      <div className="addCartContainer">
-        <button>Add to cart</button>
-      </div>
+      <button className="button-add-count" onClick={() => addProduct(count)} >Agregar producto</button>
     </div>
-  );
-};
+  )
+}
+export default ItemCount
 
-export default ItemCount;
+
+

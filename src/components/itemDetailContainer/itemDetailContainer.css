@@ -1,54 +1,56 @@
-.itemDetail{
+.item-detail{
     margin: 50px 55px;
     display: flex;
     justify-content: space-evenly;
-    gap: 20%;
+    gap: 5%;
 }
 
-.itemSpecs{
-    margin-top: 10px;
+
+/* CARD DE LA INFORMACION DEL PRODUCTO */
+
+.item-detail-container{
+    margin: 10px 25px 0px 0px;
     display: grid;
-    grid-template-rows: 70px 150px 200px 50px ;
+    grid-template-rows: 10% 20% 15% ;
     font-family: "Pathway Gothic One", sans-serif;
+    
 }
 
-.nameDetail{
+.title-detail{
     font-size: 50px;
 }
 
-.descriptionDetail{
+.text-detail{
     font-size: 20px;
 }
 
-.priceDetail{
+.price-detail{
     font-size: 50px;
     font-weight: bolder;
-}
+}   
 
 
 
-/* BOTONES PARA AUMENTAR EL CONTADOR Y BOTON PARA AGREGAR AL CARRITO */
 
-
-.cartContainer{
+.item-count{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    transform: skewX(-20deg);
+    justify-content: center;    
+    gap:20% 
 }
 
 
-.buttonContainer{
-    width: 250px;
+.controls-count{
+    width: 200px;
     height: 50px;
     border: 1px solid black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transform: skewX(-20deg);
 
 }
 
-.buttonContainer button{
+.controls-count button{
     font-size: 18px;
     background: none;
     border: none;
@@ -58,21 +60,24 @@
 }
 
 
-.buttonContainer button:hover{
+.controls-count button:hover{
     cursor: pointer;
 }
 
 
-.addCartContainer{
+.button-add-count{
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 50px;
-    width: 250px;
+    width: 200px;
     font-size: 20px;
     border: 1px solid black;
+    transform: skewX(-20deg);
+    background-color: white;
 }
 
-.addCartContainer button{
+.button-add-count button{
     font-size: 28px;
     font-family: "Pathway Gothic One", sans-serif;
     background: none;
@@ -80,11 +85,31 @@
 }
 
 
-.addCartContainer:hover{
+ .button-add-count:hover{
+    cursor: pointer;
     background-color: black;
+    transition: .2s;
+    color: white;
 }
 
-.addCartContainer:hover button{
+
+
+.button-end-buy{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    height: 50px;
+    width: 200px;
+    transform: skewX(-20deg);
+}
+
+.button-end-buy:hover{
+    background-color: black;
     color: white;
+
 }
 
